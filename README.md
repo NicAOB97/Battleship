@@ -17,3 +17,11 @@ I wrote all of this after having programmed with python for only a week. <br>
 
 ![Classic Childhood Game](img/battleship_im.jpeg?raw=true "Battleship, Classic Game") 
 
+<h2>Pre-requisites :black_nib: </h2>
+
+```
+pip install -r requirements.txt 
+```
+
+<h2>AUTHOR :black_nib: </h2>
+- Nic Orchard @NicAOB97
