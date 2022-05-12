@@ -4,7 +4,7 @@
 My version of the classic Battleship game- for a moment of reminiscing about childhood fun. Written in Python.<br>
 <em>My version del clásico: La Batalla Naval, para recordad la juventud y los buenos tiempos. Hecho en Python. </em>
 
-![Classic Childhood Game](hundir-la-flota-juego-de-mesa.jpg?raw=true "Battleship, Classic Game") 
+![Classics](img/hundir_la_flota.jpeg?raw=true "Battleship, Classics") 
 
 Given a couple of weeks to complete our assignment and create a Machine Learning model at The Bridge School... this is what I did. <br>
 <em>Para completar el modulo de Machine Learning de The Bridge School, decidi hacer lo siguiente... </em>
