@@ -127,9 +127,15 @@ def personalize_your_board(user_board):
 # FUNCTION: BOAT_POSITION
 def boat_position(board):
 
-    '''Two functions that position boats in different ways: 1 according to inputs and the other randomly '''
-    # inputs -->
-    #           outputs --> array “board”
+    '''
+        Function that is run if the user decides to position their own boats. 
+        Two functions that position boats in different ways: 1 according to inputs and the other randomly.
+
+        inputs:
+               board: 2D array of spaces
+        outputs:
+                board: 2D array of spaces with 10 O's where the boats are placed
+    '''
 
     board_count = np.count_nonzero(board == 'O')
     num_barco = 0
@@ -314,12 +320,14 @@ def boat_position(board):
 # FUNCTION: RAN_BOAT_POSITIONS
 def ran_boat_positions(board):
 
-    # Creating a random board
+    '''
+        Function that is run if the user decides to randomly position boats on board. 10 boats positioned on 10x10 board randomly, only 1 boat in each position
 
-    # 10 boats positioned on 10x10 board randomly 
-    # only 1 boat in each position
-    # inputs -->
-    #           outputs --> array “board with boat”
+        inputs:
+               board: 2D array of spaces
+        outputs:
+                board: 2D array of spaces with 10 O's where the boats are placed
+    '''
 
     board_count = np.count_nonzero(board== 'O')
 
@@ -405,45 +413,53 @@ def ran_boat_positions(board):
 ###############################################################################################################################################
 
 # FUNCTION: IS_POSIBLE
-def is_posible(tablero_ordena, boat_size, dir, board_count, x,y):
+def is_posible(board, boat_size, dir, board_count, x,y):
    
-    # funcion que se asegura de que no haya ya un barco donde se va a posicionar el barco nuevo 
-    # segun sus coordinadas y la direccion 
+    ''' function which ensures there are no boats positioned where the next boat is trying to be positioned according to the new boat coordinates and direction 
+        called by functions: boat_position and ran_board_positions
 
-    # input --> tablero_ordena = array 
-    #           boat_size = int
-    #           dir = str
-    #           coordinadas = int(tupla)
-    #                                   output --> booleano : True or False             
+    input --> board = 2D array (10 x 10)
+               boat_size = int
+               dir = str
+               coordinadas = int(tupla)
+    output --> booleano : True or False         
+    '''  
+
     import numpy as np
     aux = []
     
     # NORTE
     if dir.lower() == 'n' or dir.lower() == 'north':
-        aux = tablero_ordena.copy()
+        aux = board.copy()
         aux[x - (boat_size-1) : x+1, y]  = 'O'
     if np.count_nonzero(aux == 'O') == (board_count + boat_size):
         return True 
     # ESTE
     if dir.lower() == 'e' or dir.lower() == 'east':
-        aux = tablero_ordena.copy()
+        aux = board.copy()
         aux[x, y: y + (boat_size)]  = 'O'
         if np.count_nonzero(aux == 'O') == (board_count + boat_size):
             return True 
     # SUR
     if dir.lower() == 's' or dir.lower() == 'south':
-        aux = tablero_ordena.copy()
+        aux = board.copy()
         aux[x: x + (boat_size), y] = 'O'
         if np.count_nonzero(aux == 'O') == (board_count + boat_size):
             return True 
     # OESTE 
     if dir.lower() == 'w' or dir.lower() == 'west':
-        aux = tablero_ordena.copy()
+        aux = board.copy()
         aux[x, y-(boat_size-1): y+1]  = 'O'
         if np.count_nonzero(aux == 'O') == (board_count + boat_size):
             return True 
 
 # FUNCTION IS_DIRECTION
 def is_direction(dir):
+
+    ''' conditional function which checks whether used input is a direction 
+
+    input --> dir (user input)
+    output --> booleano : True or False'''  
+
     return type(dir) == str and ( dir.lower() == 'n' or dir.lower() == 's' or dir.lower() == 'e' or dir.lower() == 'w' or dir.lower() == 'north' or dir.lower() == 'south' or dir.lower() == 'east' or dir.lower() == 'west')
 
