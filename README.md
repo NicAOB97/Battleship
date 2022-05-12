@@ -1,14 +1,15 @@
 # Battleship
-My version of the classic Battleship game- written in Python.
+# Batalla Naval
 
-<strong><em>Batalla Naval</em></strong><br>
-<em>My version del clásico: La Batalla Naval, para recordad la juventud y los buenos tiempos </em>
+My version of the classic Battleship game- for a moment of reminiscing about childhood fun. Written in Python.
+<em>My version del clásico: La Batalla Naval, para recordad la juventud y los buenos tiempos. Hecho en Python. </em>
+
+![Classic Childhood Game](img/battleship_im.jpeg?raw=true "Battleship, Classic Game") 
 
 Given a couple of weeks to complete our assignment and create a Machine Learning model at The Bridge School... this is what I did. <br>
 <em>Para completar el modulo de Machine Learning de The Bridge School, decidi hacer lo siguiente... </em>
 
-![Classic Childhood Game](img/battleship_im.jpeg?raw=true "Battleship, Classic Game") 
-<br>Image with Mediapipe Solutions applied to the left, image without on the right
+
 
 Increasing Accesibility in Video Communication<br>
 <em>Incrementando la Accesibilidad de las Plataformas de Comunicación Virtual de Video</em>
