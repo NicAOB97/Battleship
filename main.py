@@ -1,7 +1,6 @@
 import random 
-from nico_boat_functions import ran_boat_positions, personalize_your_board, turns
-from nico_game_functions import turns
-from nico_classes import Board
+from functions import ran_boat_positions, personalize_your_board, turns
+from classes import Board
 from colorama import Fore
 import pyfiglet 
 

@@ -1,13 +1,34 @@
 # GAME FUNCTIONS
-import random
 import time 
+import random
+import numpy as np
+
+###############################################################################################################################################
+# RUNNING THE GAME
+###############################################################################################################################################
 
 # FUNCTION: TURNS
 def turns(start, computer_shots, user_board, computer_hits, user_shots, computer_board, user_hits):
-    ''' game turns: computer and user
-    
-    '''
 
+    ''' Runs the game turns. While either the user or the computer have less than 20 hits, this functions alternates between the user and the computer turns. 
+        Each user turn asks for an input: a set of coordinates where the user would like to aim to see if the computer has a boat in that location. 
+        If a boat is hit, the user will be asked for a new pair of coordinates until they miss, then the computer will take its turn.
+        The input start determines whether the game starts with the user or computers turn.
+        The x_shots are boards which keep track of where the user/computer have shot. 
+        The x_board are boards which keep track of where the player has placed their boats and where they've been shot at (if hit or not)
+        The x_hits keep track of the score. 
+
+        inputs: 
+               start: boolean (True or False) 
+               computer_shots: 2D array
+               user_board: 2D array
+               computer_hits: int
+               user_shots: 2D array
+               computer_board: 2D array
+               user_hits: int
+        outputs: 
+               str (specifying who won the game)
+    '''
 
     while user_hits != 20 and computer_hits != 20:
         # user turn
@@ -65,15 +86,22 @@ def turns(start, computer_shots, user_board, computer_hits, user_shots, computer
     else: 
         print("Congratulations, you beat me.") 
 
-##################################################################################################################################
+###############################################################################################################################################
+# GAME SET UP FUNCTIONS
+###############################################################################################################################################
 
-# function that evaluates how the player wants to place their boats on their board
-import time
-import numpy as np
-import random
-
+# FUNCTION: PERSONALIZE_YOUR_BOARD
 def personalize_your_board(user_board):
     
+    ''' Function that evaluates how the player wants to place their boats on their board
+        Asks whether the player wants to place their own boats or have them placed randomly
+
+        input: 
+              user_board: 2D array of blank spaces
+        output: 
+              user_board: 2D array of blank spaces
+    '''
+
     try:
         choose_your_board = input("Would you like to place your own boats, or have them places randomly? Yes or no? ")
     except ValueError as e:
@@ -92,14 +120,14 @@ def personalize_your_board(user_board):
             time.sleep(0.5)
         else:
             print("I need you to type in your answer")
-            # personalize_your_board(user_board)
 
     return user_board
 
 
-# Two functions that position boats in different ways: 1 according to inputs and the other randomly
-
+# FUNCTION: BOAT_POSITION
 def boat_position(board):
+
+    '''Two functions that position boats in different ways: 1 according to inputs and the other randomly '''
     # inputs -->
     #           outputs --> array “board”
 
@@ -282,10 +310,12 @@ def boat_position(board):
 
     return board
 
-###############################################################################################################################################
-# Creating a random board
 
+# FUNCTION: RAN_BOAT_POSITIONS
 def ran_boat_positions(board):
+
+    # Creating a random board
+
     # 10 boats positioned on 10x10 board randomly 
     # only 1 boat in each position
     # inputs -->
@@ -374,7 +404,8 @@ def ran_boat_positions(board):
 # CONDITIONAL FUNCTIONS
 ###############################################################################################################################################
 
- def is_posible(tablero_ordena, boat_size, dir, board_count, x,y):
+# FUNCTION: IS_POSIBLE
+def is_posible(tablero_ordena, boat_size, dir, board_count, x,y):
    
     # funcion que se asegura de que no haya ya un barco donde se va a posicionar el barco nuevo 
     # segun sus coordinadas y la direccion 
@@ -412,6 +443,7 @@ def ran_boat_positions(board):
         if np.count_nonzero(aux == 'O') == (board_count + boat_size):
             return True 
 
+# FUNCTION IS_DIRECTION
 def is_direction(dir):
     return type(dir) == str and ( dir.lower() == 'n' or dir.lower() == 's' or dir.lower() == 'e' or dir.lower() == 'w' or dir.lower() == 'north' or dir.lower() == 'south' or dir.lower() == 'east' or dir.lower() == 'west')
 
