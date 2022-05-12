@@ -1,7 +1,7 @@
 # Battleship
 My version of the classic Battleship game- written in Python.
 
-<strong><em>Batalla Naval</em></strong>
+<strong><em>Batalla Naval</em></strong><br>
 <em>My version del clásico: La Batalla Naval, para recordad la juventud y los buenos tiempos </em>
 
 Given a couple of weeks to complete our assignment and create a Machine Learning model at The Bridge School... this is what I did. <br>
