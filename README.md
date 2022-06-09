@@ -9,8 +9,8 @@ My version of the classic Battleship game- for a moment of reminiscing about chi
 Using Python I created this project with a standard structure including: functions, classes and a main.py script.  <br>
 <em>Utilizando Python, hice este proyecto intentando adherir a la estructura estandard incluyendo funciones, clases y un main.py. </em>
 
-I wrote all of this after having programmed with python for only a week. <br>
-<em>Desarrolle este proyecto tras una mera semana aprendiendo python.</em>
+Written all of this after having programmed with python for only a week. <br>
+<em>Desarrollado tras una mera semana aprendiendo python.</em>
 
 ![Classic Childhood Game](img/battleship_im.jpeg?raw=true "Battleship, Classic Game") 
 
