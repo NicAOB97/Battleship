@@ -36,7 +36,7 @@ def turns(start, computer_shots, user_board, computer_hits, user_shots, computer
             correct = True
             while correct == True:
                 print(user_shots)
-                user_shot_coords = input("Choose where you'd like to shoot, introduce coordinated: x,y")
+                user_shot_coords = input("Choose where you'd like to shoot, introduce coordinated: x,y ")
                 shot_coords = user_shot_coords.split(",")
                 x = int(shot_coords[0]) -1
                 y = int(shot_coords[1]) -1

@@ -17,7 +17,7 @@ I wrote all of this after having programmed with python for only a week. <br>
 
 ![Classic Childhood Game](img/battleship_im.jpeg?raw=true "Battleship, Classic Game") 
 
-<h2>Pre-requisites :black_nib: </h2>
+<h2>Pre-requisites :heavy_check_mark: </h2>
 
 ```
 pip install -r requirements.txt 

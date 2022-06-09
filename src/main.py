@@ -1,3 +1,4 @@
+# import dependencies
 import random 
 from functions import ran_boat_positions, personalize_your_board, turns
 from classes import Board
